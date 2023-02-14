@@ -1,38 +1,298 @@
-.App {
-  text-align: center;
+body {
+  background: #f6f6f6;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  max-width: 1160px;
+  padding: 20px 100px 0px 100px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  max-width: 1200px;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 250px;
+}
+
+.button {
+  cursor: pointer;
+  border: none;
+  padding: 20px;
+  background: #f6f6f6;
+  color: #3939f7;
+}
+
+.body {
+  max-width: 1200px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.body__left {
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.body__right {
+  width: 485px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.billing {
+  padding: 20px;
   display: flex;
   flex-direction: column;
+  background: white;
+  border-radius: 5px;
+}
+
+.order {
+  max-height: 50px;
+}
+
+.billing--shipping {
+  max-height: 200px;
+}
+
+.billing--payment {
+  margin-top: -315px;
+  max-height: 410px;
+}
+
+.fontWeight {
+  font-weight: 700;
+}
+
+.shadow {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.billing__name {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 30px;
+}
+
+.billing__firstName {
+  width: 50%;
+  position: relative;
+}
+
+.billing--email {
+  max-width: 100%;
+}
+
+.input {
+  border: 1px solid rgb(194, 194, 194);
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 1rem;
+  outline: none;
+  font-weight: 600;
+  color: rgb(83, 82, 82);
+  width: 250px;
+}
+
+.input--email {
+  width: 550px;
+}
+
+.input--select {
+  width: 270px;
+  background: white;
+}
+
+.label {
+  position: absolute;
+  top: -10px;
+  left: 5px;
+  background: white;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: grey;
+  font-size: 0.8rem;
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  gap: 10px;
+  max-width: 400px;
+}
+
+.radio {
+  max-width: 580px;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  border: 1px solid rgba(30, 30, 252, 0.884);
+  background-color: #dce8ff;
+}
+
+.credit {
+  max-width: 580px;
+  border: 1px solid rgba(30, 30, 252, 0.884);
+  background-color: #dce8ff;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+
+.radio--credit {
+  border: none;
+  margin-top: 0px;
+  padding: 0;
+}
+
+.radio--white {
+  border: 1px solid gray;
+  background: white;
+}
+
+.radio--gap {
+  gap: 10px;
+}
+
+.label--bg {
+  background: #dce8ff;
+}
+
+.input--bg {
+  background: #dce8ff;
+}
+
+.lock__icon {
+  display: flex;
+  flex-direction: row;
+  max-width: 580px;
+  padding: 10px;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.fontSize {
+  font-size: 0.9rem;
+}
+
+.collapse__arrow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.order--margin {
+  margin-top: -460px;
+  max-height: 20px;
+}
+
+.billing--summary {
+  max-height: 550px;
+  margin-top: -950px;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  /* max-width: 100px; */
+  /* background: yellow; */
+}
+
+.summary__row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.order--inp {
+  max-width: 425px;
+  /* background: red;
+    padding: 10px; */
+  justify-content: flex-start;
+}
+
+.button--filled {
+  margin-top: 20px;
+  border-radius: 5px;
+  background: rgb(65 136 243);
+  font-size: 1rem;
   color: white;
+  padding: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+/* .show__content {
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.collapsible {
+  cursor: pointer;
+} */
+
+
+@media (max-width:1115px) {
+  .body {
+    display: flex;
+    flex-direction: column !important;
   }
-  to {
-    transform: rotate(360deg);
+
+  .body__right {
+    margin-top: -415px !important;
+    max-width: 900px !important;
+  }
+
+  .order {
+    margin-top: 10px !important;
+  }
+
+  .order--margin {
+    margin-top: -140px !important;
+  }
+
+  .billing--summary {
+    margin-top: -320px !important;
   }
 }
