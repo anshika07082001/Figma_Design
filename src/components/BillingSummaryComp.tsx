@@ -1,27 +1,32 @@
 import React from "react";
 
-const BillingSummaryComp = () => {
-  const showDiv = () => {
-   
-  };
+type billingProps = {
+  showdiv: (num: number) => void;
+  divRef: React.MutableRefObject<any>;
+};
 
+const BillingSummaryComp = (props: billingProps) => {
   return (
     <div className="billing shadow billing--summary">
-      <div className="collapse__arrow collapsible" onClick={showDiv}>
+      <div
+        className="collapse__arrow row collapsible"
+        id="3"
+        onClick={() => props.showdiv(2)}
+      >
         <label className="fontWeight">Billing Summary</label>
         <i className="fa fa-caret-up"></i>
       </div>
-      <div className="show__content">
-        <div className="summary">
-          <div className="summary__row">
+      <div className="hide" ref={(ref) => (props.divRef.current[2] = ref)}>
+        <div className="column">
+          <div className="summary row">
             <label className="">Subtotal</label>
             <label className="">$3720,27</label>
           </div>
-          <div className="summary__row">
+          <div className="summary row">
             <label className="">Discount</label>
             <label className="">-$749.99</label>
           </div>
-          <div className="summary__row">
+          <div className="summary row">
             <label className="">
               Warranty (Platinum)
               <br />
@@ -31,41 +36,33 @@ const BillingSummaryComp = () => {
             </label>
             <label className="">$259.99</label>
           </div>
-          <div className="summary__row">
+          <div className="summary row">
             <label className="">Shipping</label>
             <label className="">$0.00</label>
           </div>
-          <div className="summary__row">
+          <div className="summary row">
             <label className="">Tax</label>
             <label className="">$228.27</label>
           </div>
           <hr />
-          <div className="summary__row">
+          <div className="summary row">
             <label className="fontWeight">Grand Total</label>
             <label className="fontWeight">$3,439.00</label>
           </div>
           <div className="billing__name order--inp">
-            <div className="billing__firstName">
+            <div className="billing__firstName text--input">
               <label className="label">First Name</label>
-              <input
-                value="Type Here..."
-                className="input"
-                style={{
-                  padding: "25px",
-                  margin: "0px",
-                  paddingRight: "170px",
-                }}
-              />
+              <textarea value="Type Here..." className="input text--input" />
             </div>
           </div>
-          <div className="checkbox">
+          <div className="checkbox row">
             <input type="checkbox" checked />
-            <label>
+            <span>
               Please check to acknowledge our{" "}
-              <span style={{ color: "rgb(65 136 243)" }}>
+              <label style={{ color: "rgb(65 136 243)" }}>
                 Privacy & Terms Policy
-              </span>
-            </label>
+              </label>
+            </span>
           </div>
           <button className="button button--filled fontWeight">
             Pay $3,439.00
