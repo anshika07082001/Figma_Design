@@ -1,5 +1,6 @@
 body {
   background: #f6f6f6;
+  font-family: sans-serif;
 }
 
 * {
@@ -36,7 +37,7 @@ body {
 .navbar__btn {
   justify-content: space-around;
   align-items: center;
-  max-width: 250px;
+  max-width: 280px;
 }
 
 .button {
